@@ -1,15 +1,12 @@
-// 5 – Elabore um programa para efetuar o cálculo do valor de uma prestação em atraso, utilizando a fórmula:
-            // PRESTAÇÃO:=VALOR+(VALOR*(TAXA/100)*TEMPO).
-            double valor, taxa, prestacao, dia, hora, tempo;
-            Console.WriteLine("Digite o valor da prestação: ");
-            valor = double.Parse(Console.ReadLine());
-            Console.WriteLine("Digite o valor da taxa: ");
-            taxa = double.Parse(Console.ReadLine());
-            Console.WriteLine("Digite a quantidade de dias em atraso: ");
-            dia = double.Parse(Console.ReadLine());
-            Console.WriteLine("Digite a quantidade de horas em atraso: ");
-            hora = double.Parse(Console.ReadLine());
-            tempo = (dia * 24) + hora;
-            prestacao = valor+(valor*(taxa/100)*tempo);
-            Console.WriteLine("Você tem a pagar: "+prestacao);
-            Console.ReadKey();
+int aula;
+double valor, salario, desconto, resultado;
+Console.WriteLine("Digite suas hora/aula");
+aula = int.Parse(Console.ReadLine());
+Console.WriteLine("Digite o valor hora/aula");
+valor = double.Parse(Console.ReadLine());
+Console.WriteLine("Digite o percentual de desconto do INSS");
+desconto = double.Parse(Console.ReadLine());
+salario = aula * valor;
+resultado = salario - ((desconto/100) * salario);
+Console.WriteLine("O seu salário é: " + resultado);
+Console.ReadKey();
